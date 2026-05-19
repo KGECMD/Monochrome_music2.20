@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: monochrome-frontend
+    env: docker
+    repo: https://github.com
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 3000
+      # Optioneel: Als je een eigen werkende hifi-api hebt, vul die dan hieronder in.
+      # Laat je dit leeg of weg, dan gebruikt Monochrome zijn eigen (soms overbelaste) publieke servers.
+      - key: PUBLIC_API_URL
+        value: "https://onrender.com" 
